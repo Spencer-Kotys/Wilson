@@ -1,0 +1,61 @@
+[gd_scene format=2]
+
+[node name="NewSignalPlayer" type="MarginContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -93.0
+margin_top = -54.0
+margin_right = 93.0
+margin_bottom = 54.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 186.0
+margin_bottom = 108.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 186.0
+margin_bottom = 14.0
+text = "Enter a name"
+align = 1
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 186.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+margin_top = 46.0
+margin_right = 186.0
+margin_bottom = 60.0
+text = "Choose a difficulty"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 64.0
+margin_right = 186.0
+margin_bottom = 84.0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_right = 44.0
+margin_bottom = 20.0
+text = "Child"
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 48.0
+margin_right = 107.0
+margin_bottom = 20.0
+text = "Normal"
+
+[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 111.0
+margin_right = 186.0
+margin_bottom = 20.0
+text = "Soleimani"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_top = 88.0
+margin_right = 186.0
+margin_bottom = 108.0
+text = "Continue"

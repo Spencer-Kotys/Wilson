@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Start.gd" type="Script" id=1]
+
+[node name="Start" type="MarginContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -76.5
+margin_top = -46.0
+margin_right = 76.5
+margin_bottom = 46.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 153.0
+margin_bottom = 92.0
+
+[node name="Single" type="Button" parent="VBoxContainer"]
+margin_right = 153.0
+margin_bottom = 20.0
+text = "New Single Game"
+
+[node name="Multi" type="Button" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 153.0
+margin_bottom = 44.0
+text = "New Muliplayer Game"
+
+[node name="Saved" type="Button" parent="VBoxContainer"]
+margin_top = 48.0
+margin_right = 153.0
+margin_bottom = 68.0
+text = "Load Saved Game"
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+margin_top = 72.0
+margin_right = 153.0
+margin_bottom = 92.0
+text = "Back"
+[connection signal="pressed" from="VBoxContainer/Single" to="." method="_on_Single_pressed"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_Back_pressed"]

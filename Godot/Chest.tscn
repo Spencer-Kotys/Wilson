@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Background/Inventory.png" type="Texture" id=1]
+[ext_resource path="res://Chest.gd" type="Script" id=2]
+[ext_resource path="res://ChestB.gd" type="Script" id=3]
+[ext_resource path="res://CInventory.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 47.1656, 33.4178 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 87.8842, 15.6076 )
+
+[node name="Chest" type="TextureRect"]
+margin_left = 397.0
+margin_top = 191.0
+margin_right = 558.0
+margin_bottom = 326.0
+texture = ExtResource( 1 )
+expand = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChestB" type="StaticBody2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChestB"]
+position = Vector2( 79.6192, 67.1086 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="ChestB"]
+margin_left = 25.1684
+margin_top = -1.56665
+margin_right = 127.168
+margin_bottom = 12.4333
+text = "Press E to Open"
+
+[node name="Area2D" type="Area2D" parent="ChestB"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChestB/Area2D"]
+position = Vector2( -74.3689, 65.0139 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ChestB/Area2D"]
+position = Vector2( 231.885, 67.4575 )
+shape = SubResource( 2 )
+
+[node name="Popup" type="TextureRect" parent="ChestB"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="CInventory" parent="ChestB/Popup" instance=ExtResource( 4 )]
+margin_left = -69.8219
+margin_top = -190.416
+margin_right = 229.178
+margin_bottom = -10.416
+[connection signal="body_entered" from="ChestB/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="ChestB/Area2D" to="ChestB" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="ChestB/Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_exited" from="ChestB/Area2D" to="ChestB" method="_on_Area2D_body_exited"]

@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Background/icon.png" type="Texture" id=1]
+
+[node name="CInventory" type="MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 14.0
+text = "Do you want to pick up this item?"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 1024.0
+margin_bottom = 32.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 469.0
+margin_right = 510.0
+margin_bottom = 14.0
+text = "Yes (Y)"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 514.0
+margin_right = 554.0
+margin_bottom = 14.0
+text = "No (N)"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+margin_top = 36.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+texture = ExtResource( 1 )
+expand = true

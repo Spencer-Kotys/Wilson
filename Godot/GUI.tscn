@@ -1,0 +1,102 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GUI.gd" type="Script" id=1]
+[ext_resource path="res://Background/Health-Empty.png" type="Texture" id=2]
+[ext_resource path="res://Background/Health-Full.png" type="Texture" id=3]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+gravity = Vector3( 0, 10, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel = 50.0
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+margin_right = -2.0
+margin_bottom = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+margin_right = 1022.0
+margin_bottom = 100.0
+
+[node name="TextureProgress" type="TextureProgress" parent="MarginContainer/HBoxContainer"]
+margin_right = 509.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 100 )
+size_flags_horizontal = 3
+value = 50.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
+nine_patch_stretch = true
+
+[node name="Level" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 513.0
+margin_right = 1022.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+
+[node name="Background" type="NinePatchRect" parent="MarginContainer/HBoxContainer/Level"]
+margin_right = 509.0
+margin_bottom = 100.0
+
+[node name="Title" type="TextureRect" parent="MarginContainer/HBoxContainer/Level"]
+margin_right = 509.0
+margin_bottom = 100.0
+
+[node name="Number" type="Label" parent="MarginContainer/HBoxContainer/Level"]
+margin_top = 43.0
+margin_right = 509.0
+margin_bottom = 57.0
+text = "Level X"
+align = 1
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Game Over" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -382.396
+margin_top = -84.7471
+margin_right = -309.396
+margin_bottom = -70.7471
+rect_scale = Vector2( 10, 10 )
+text = "Game Over"
+align = 1
+
+[node name="Win" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -382.396
+margin_top = -84.7471
+margin_right = -309.396
+margin_bottom = -70.7471
+rect_scale = Vector2( 10, 10 )
+text = "You Win!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particles2D" type="Particles2D" parent="Win"]
+position = Vector2( 32.3682, 5.8707 )
+emitting = false
+amount = 100
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 1 )

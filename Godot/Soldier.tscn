@@ -1,0 +1,61 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Soldier.gd" type="Script" id=1]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-1.png" type="Texture" id=2]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-2.png" type="Texture" id=3]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-3.png" type="Texture" id=4]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-4.png" type="Texture" id=5]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-5.png" type="Texture" id=6]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-6.png" type="Texture" id=7]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-7.png" type="Texture" id=8]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-8.png" type="Texture" id=9]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-9.png" type="Texture" id=10]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-10.png" type="Texture" id=11]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-11.png" type="Texture" id=12]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-12.png" type="Texture" id=13]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-13.png" type="Texture" id=14]
+[ext_resource path="res://Characters/Soldier/Playable-Character-Soldier-Walking-Right-14.png" type="Texture" id=15]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 9.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 60.0
+height = 180.0
+
+[node name="Soldier" type="KinematicBody2D"]
+position = Vector2( 510, 300.75 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.420898, 0.420898 )
+frames = SubResource( 1 )
+animation = "Walk"
+frame = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="RayGround" type="RayCast2D" parent="."]
+position = Vector2( 0, 130 )
+enabled = true
+collide_with_areas = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="RayR" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 150, 0 )
+
+[node name="RayL" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( -150, 0 )
