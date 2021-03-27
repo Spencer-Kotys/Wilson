@@ -29,6 +29,11 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 192, 0, 192 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -45,6 +50,11 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 192, 0, 192 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -61,6 +71,11 @@ points = PoolVector2Array( 0, 0, 192, 0, 192, 192, 0, 192 )
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -104,58 +119,46 @@ position = Vector2( 1070, 320 )
 position = Vector2( 4440, 700 )
 
 [node name="Ladder" parent="." instance=ExtResource( 7 )]
-position = Vector2( 5350, 760 )
+position = Vector2( 5335.17, 747.286 )
 
 [node name="Ladder2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 5350, 620 )
+position = Vector2( 5335.17, 570.205 )
 
 [node name="Ladder3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 5350, 480 )
-
-[node name="Ladder4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 5350, 340 )
+position = Vector2( 5335.17, 389.946 )
 
 [node name="Ladder5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 13210, 3120 )
+position = Vector2( 13214.5, 3112.51 )
 
 [node name="Ladder6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 13210, 2980 )
+position = Vector2( 13214.5, 2933.39 )
 
 [node name="Ladder7" parent="." instance=ExtResource( 7 )]
-position = Vector2( 13210, 2840 )
+position = Vector2( 13213.8, 2752.39 )
 
 [node name="Ladder8" parent="." instance=ExtResource( 7 )]
-position = Vector2( 13210, 2700 )
-
-[node name="Ladder9" parent="." instance=ExtResource( 7 )]
-position = Vector2( 13210, 2560 )
+position = Vector2( 13214.3, 2571.5 )
 
 [node name="Ladder10" parent="." instance=ExtResource( 7 )]
-position = Vector2( 16290, 1400 )
+position = Vector2( 16283.3, 1382.65 )
 
 [node name="Ladder11" parent="." instance=ExtResource( 7 )]
-position = Vector2( 16290, 1260 )
+position = Vector2( 16283.3, 1203.11 )
 
 [node name="Ladder12" parent="." instance=ExtResource( 7 )]
-position = Vector2( 16290, 1122.57 )
+position = Vector2( 16282.7, 1022.43 )
 
 [node name="Ladder13" parent="." instance=ExtResource( 7 )]
-position = Vector2( 16290, 980 )
-
-[node name="Ladder14" parent="." instance=ExtResource( 7 )]
-position = Vector2( 16290, 840 )
+position = Vector2( 16282, 843.412 )
 
 [node name="Ladder15" parent="." instance=ExtResource( 7 )]
-position = Vector2( 17250, 630 )
+position = Vector2( 17240.5, 615.167 )
 
 [node name="Ladder16" parent="." instance=ExtResource( 7 )]
-position = Vector2( 17250, 490 )
+position = Vector2( 17240.5, 433.848 )
 
 [node name="Ladder17" parent="." instance=ExtResource( 7 )]
-position = Vector2( 17250, 350 )
-
-[node name="Ladder18" parent="." instance=ExtResource( 7 )]
-position = Vector2( 17250, 210 )
+position = Vector2( 17240.5, 253.589 )
 
 [node name="Chest" parent="." instance=ExtResource( 8 )]
 margin_left = 17998.6
