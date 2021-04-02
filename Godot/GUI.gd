@@ -29,3 +29,5 @@ func _on_Soldier_dead():
 func _on_Soldier_win():
 	$"Win".show()
 	$"Win/Particles2D".restart()
+	yield(get_tree().create_timer(5.0), "timeout")
+	get_tree().change_scene("res://StartMenu.tscn")
