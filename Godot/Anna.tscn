@@ -34,13 +34,11 @@ enabled = true
 cast_to = Vector2( -200, 0 )
 
 [node name="Label" type="Label" parent="."]
-visible = false
 margin_left = -41.5688
 margin_top = -175.295
 margin_right = 50.4312
 margin_bottom = -126.295
-text = "Hello there
-adventurer"
+text = "Hello there"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
