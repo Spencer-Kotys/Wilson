@@ -20,6 +20,10 @@ run/main_scene="res://StartMenu.tscn"
 boot_splash/image="res://Characters/Playable-Character-Soldier-1.png"
 config/icon="res://Characters/Playable-Character-Soldier-1.png"
 
+[display]
+
+window/stretch/mode="2d"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

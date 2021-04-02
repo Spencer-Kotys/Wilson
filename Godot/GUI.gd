@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 # Declare member variables here. Examples:
-onready var bar = $MarginContainer/HBoxContainer/TextureProgress
+onready var bar = $MarginContainer/TextureProgress
 onready var tween = $Tween
 var animated_health = 0
 # Called when the node enters the scene tree for the first time.
