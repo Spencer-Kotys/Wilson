@@ -2,4 +2,4 @@
 * text=auto
 
 # Manual overide for GDScript files
-*.gd lingusit-language=GDScript
+*.gd linguist-language=GDScript
