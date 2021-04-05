@@ -24,10 +24,12 @@ func update_health(new_value):
 func _on_Soldier_dead():
 	update_health(0)
 	$"Game Over".show()
+	yield(get_tree().create_timer(2.0), "timeout")
+	get_tree().change_scene("res://StartMenu.tscn")
 
 
 func _on_Soldier_win():
 	$"Win".show()
 	$"Win/Particles2D".restart()
-	yield(get_tree().create_timer(5.0), "timeout")
+	yield(get_tree().create_timer(2.0), "timeout")
 	get_tree().change_scene("res://StartMenu.tscn")
