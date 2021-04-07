@@ -119,6 +119,15 @@ position = Vector2( 1070, 320 )
 [node name="Enemy2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 4440, 700 )
 
+[node name="Enemy3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 10051, 3257.45 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 11733.3, 3258.95 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 15145, 1729.61 )
+
 [node name="Ladder" parent="." instance=ExtResource( 7 )]
 position = Vector2( 5335.17, 747.286 )
 
